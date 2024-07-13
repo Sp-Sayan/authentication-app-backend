@@ -16,7 +16,10 @@ mongoose.connect(mongourl).then(() => {
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: https://portal-app-self.vercel.app/,
+    credentials: true 
+}));
 
 app.post('/login', (req, res) => {
     // console.log(req.body);
