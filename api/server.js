@@ -4,7 +4,7 @@ const env = require('dotenv').config();
 const port = process.env.PORT || 3000;
 const mongourl = process.env.MONGO_URL;
 const mongoose = require('mongoose');
-const UserInfo = require('./db.js');
+const UserInfo = require('../db.js');
 
 
 
