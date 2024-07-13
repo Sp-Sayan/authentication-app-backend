@@ -16,10 +16,7 @@ mongoose.connect(mongourl).then(() => {
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-    // origin: process.env.SITE_URL,
-    credentials: true //to allow cookies
-}));
+app.use(cors());
 
 app.post('/login', (req, res) => {
     // console.log(req.body);
